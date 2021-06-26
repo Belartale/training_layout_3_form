@@ -1,0 +1,26 @@
+{
+  "name": "beautiful_form",
+  "version": "1.0.0",
+  "description": "User registration form using HTML, CSS and BEM methodology, main emphasis is on stylization of the form.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belartale/beautiful_form.git"
+  },
+  "author": "belartale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belartale/beautiful_form/issues"
+  },
+  "homepage": "https://github.com/Belartale/beautiful_form#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.15",
+    "nodemon": "^2.0.7"
+  }
+}
