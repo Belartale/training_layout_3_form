@@ -103,6 +103,47 @@
   height: 550px;
   box-shadow: -90px -25px 10px -50px rgba(0, 0, 0, 0.6);
 }
+
+.paper {
+  min-width: 1px;
+}
+
+.paper__block {
+  position: relative;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  width: 400px;
+  background-color: white;
+  /*one = button // two = left // three = right*/
+  box-shadow: 0px 25px 10px -20px rgba(0, 0, 0, 0.2),
+    -55px 20px 10px -50px rgba(0, 0, 0, 0.2),
+    55px 20px 10px -50px rgba(0, 0, 0, 0.2);
+}
+.paper__block--shadow::after {
+  /*! shadow - top left angle*/
+  content: "";
+  position: absolute;
+  top: 46%;
+  left: 40%;
+  transform: rotate(2deg) translate(-50%, -50%);
+  z-index: -1;
+  width: 400px;
+  height: 550px;
+  box-shadow: 90px -25px 10px -50px rgba(0, 0, 0, 0.6);
+}
+.paper__block--shadow::before {
+  /*! shadow - top right angle*/
+  content: "";
+  position: absolute;
+  top: 43.5%;
+  left: 60%;
+  transform: rotate(-2deg) translate(-50%, -50%);
+  z-index: -1;
+  width: 400px;
+  height: 550px;
+  box-shadow: -90px -25px 10px -50px rgba(0, 0, 0, 0.6);
+}
+
 .form-sign-up__form * {
   display: block;
 }
