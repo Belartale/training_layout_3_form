@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const chalk = require("chalk");
 // const mongoose = require("mongoose");
 const { connectDB } = require("./server/connectDB");
 
@@ -14,6 +15,7 @@ app.use(uploadToUser);
 
 const start = (params) => {
   try {
+    console.log(chalk.red(path.join(__dirname, "views")));
     app.listen(PORT, () => {
       console.log(`START SERVER ${PORT}`);
       connectDB();
