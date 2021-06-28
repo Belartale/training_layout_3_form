@@ -6,16 +6,22 @@ const chalk = require("chalk");
 const { connectDB } = require("./server/connectDB");
 
 const uploadToUser = require("./server/routers/uploadToUser");
+const singUp = require("./server/routers/singUp");
+// app.set("views", "views");
 
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(uploadToUser);
+app.use(singUp);
+
+app.use(express.static(path.join(__dirname, "css")));
+app.use(express.static(path.join(__dirname, "js")));
 
 const start = (params) => {
   try {
-    console.log(chalk.red(path.join(__dirname, "views")));
+    console.log(chalk.red(path.join(__dirname)));
     app.listen(PORT, () => {
       console.log(`START SERVER ${PORT}`);
       connectDB();
