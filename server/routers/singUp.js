@@ -11,6 +11,8 @@ router.post("/createNewUser", async (req, res) => {
 
   await createNewUser.save();
   // await res.redirect("/infoUser");
+  await res.status(200);
+  await res.sendFile(`${pathViews}/index.html`);
 });
 
 module.exports = router;

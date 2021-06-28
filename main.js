@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "js")));
 
 const start = (params) => {
   try {
-    console.log(chalk.red(path.join(__dirname)));
+    console.log(chalk.green(path.join(__dirname)));
     app.listen(PORT, () => {
       console.log(`START SERVER ${PORT}`);
       connectDB();
